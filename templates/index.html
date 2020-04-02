@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>当前用户{{ username }}</h1>
+
+<form method="post">
+
+    分数: <input type="text" name="score">
+    <input type="submit" value="添加">
+
+</form>
+
+<hr>
+<h1>{{ username_score }}</h1>
+<button><a href="index/"></a>点击查询最新分数</button>
+
+<hr>
+水平标题： <table border="3">
+    {% for ret in ret_list %}
+        <tr>
+        <th>排名</th>
+       <th>用户</th>
+       <th>分数</th>
+
+    </tr>
+    <tr>
+       <td>{{forloop.counter}}</td>
+       <td>{{ ret.username }}</td>
+       <td>{{ ret.score }}</td>
+    </tr>
+
+    {% endfor %}
+
+
+</body>
+</html>
